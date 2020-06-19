@@ -1,0 +1,12 @@
+h1{
+text-align: center;
+color: darkgoldenrod;
+font-size: 100px;
+/* padding-top: 0%; */
+text-emphasis-style: bold;
+font-family: 'arial black';
+border: .5cm;
+border-color: darkblue;
+border-style: dashed;
+padding: 2%;
+}

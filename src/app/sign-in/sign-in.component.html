@@ -1,0 +1,24 @@
+<header><h2>Returning Member? </h2></header>
+<body>
+        <div >
+                <h3><b>Please Sign In</b></h3>
+                <form  #signInForm="ngForm">
+                        <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" 
+                                [(ngModel)]="model.name" name="name"
+                                #name="ngModel">
+                        </div>
+                               
+                        <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" 
+                                [(ngModel)]="model.password" name="password"
+                                #password="ngModel">
+                        </div>
+                        <span  *ngIf="getBool()===true" class="alert alert-danger">Your Password or User Name is Incorrect</span><br><br>
+                        <button type="submit" class="btn btn-default" (click)="GetMembers(name.value, password.value)">Sign In</button>
+                </form>
+        </div>
+        <a class="fp" href="forgot-password" >Forgot My Password</a>
+</body>

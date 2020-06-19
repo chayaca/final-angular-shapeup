@@ -1,0 +1,29 @@
+<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+    <mdb-navbar-brand>
+        <a class="navbar-brand" href="#">Navbar</a>
+    </mdb-navbar-brand>
+    <links>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active waves-light" href="#project-options" mdbWavesEffect>Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link waves-light" href="#area" mdbWavesEffect>Features</a>
+            <a class="nav-item nav-link waves-light" href="#draw-shapes" mdbWavesEffect>Pricing</a>
+            <a class="nav-item nav-link disabled" href="#display-result">Disabled</a>
+        </div>
+    </links>
+</mdb-navbar> -->
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/project-options">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="/area">Area</a></li>
+                <li class="breadcrumb-item"><a routerLink="/draw-shapes">Shapes</a></li>
+                <li class="breadcrumb-item"><a routerLink="/display-result">Result</a></li>
+                
+            </ol>
+            
+            <router-outlet></router-outlet>
+        </div>
+       
+    </div>
+</div>

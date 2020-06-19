@@ -1,0 +1,19 @@
+div{
+    /* border: 1px darkblueer; */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;     
+     color:darkblue; 
+     text-align:center;
+     /* width: auto; */
+}
+/* button{
+    color:rgb(7, 7, 31);
+    text-align:center;
+    background-color: rgb(104, 104, 218);
+} */
+.rt{
+    padding-left: 70%;
+}
+.lf{
+padding-right: 70%;
+}

@@ -1,0 +1,55 @@
+header{
+    color: darkgoldenrod;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkblue;
+}    
+body{
+   
+    color: darkblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: darkgoldenrod;
+    border-style: solid;
+    background-color: darkgoldenrod;
+}
+a:link, a:visited {
+    background-color: darkblue;
+    color: goldenrod;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: rgba(0, 0, 139, 0.616);
+    color: goldenrod;
+  }
+  a:link.fp, a:visited.fp{
+    font-size: .3cm;
+    background-color: goldenrod;
+    background: 0%;
+    color: darkblue;
+    padding: 0px 0px;
+  }
+  a:hover.fp, a:active.fp {
+   color: rgba(0, 0, 139, 0.616);
+  }
+  .l{
+    text-align: left;
+    padding-top: 0%; 
+    padding-bottom: 0%; 
+   }
+  .r{
+    text-align: right;
+    padding-top: 0%;  
+    padding-bottom: 0%; 
+  }
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    padding: 0%;
+    
+  }

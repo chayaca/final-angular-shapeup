@@ -1,0 +1,45 @@
+<app-navbar *ngIf="viewNavbar"></app-navbar>
+
+<div class="example-container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Unit" aria-label="Number" matInput [formControl]="myControl" [(ngModel)]="area.Unit"
+        [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <br>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>height</mat-label>
+      <input type="number" [(ngModel)]="area.height">
+
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>width</mat-label>
+      <input type="number" [(ngModel)]="area.width">
+
+    </mat-form-field>
+  </form>
+<!-- <TextField
+id="outlined-number"
+label="Number"
+type="number"
+InputLabelProps={{
+  shrink: true,
+}}
+variant="outlined"
+/> -->
+  <button mat-button (click)="updateArea()">Change</button>
+</div>
+<!-- <button *ngIf="!viewNavbar"(click)="saveArea()"><img src="\assets\image\circled-right-2.png"></button>
+<button *ngIf="!viewNavbar" (click)="back()"><img src="\assets\image\circled-left.png"></button> -->
+<br>
+ <div class="lf" (click)="back()"><img src="\assets\image\circled-left.png"></div>
+<div class="rt" (click)="next()"><img src="\assets\image\circled-right-2.png"></div>
+<!-- <button (click)="savearea()" style="background-image:url(\assets\image\circled-right-2.png)"></button> --> 

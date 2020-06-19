@@ -1,0 +1,33 @@
+
+<div class="example-container"> 
+    <h3><b>Create project</b></h3>
+  
+        <br>
+        <mat-form-field appearance="fill" >
+          <mat-label >Project Name:</mat-label>
+          <input matInput [(ngModel)]="p.projectName" [disabled]="newProject">
+       
+        </mat-form-field>
+      <br>
+      <mat-form-field color="blue">
+       <mat-label>Date order:</mat-label>
+       <input matInput [matDatepicker]="picker1" [min]="minDate" [matDatepicker]="dateFilter" [(ngModel)]="p.orderDate" [disabled]="newProject">
+       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+       <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <br>
+      <mat-form-field >
+       <mat-label >Date due:</mat-label>
+       <input matInput [matDatepicker]="picker2" [min]="minDate" [matDatepicker]="dateFilter" [(ngModel)]="p.dueDate">
+       <mat-datepicker-toggle matSuffix [for]="picker2"  ></mat-datepicker-toggle>
+       <mat-datepicker #picker2 color="blue"></mat-datepicker>
+      </mat-form-field>
+      <br>
+     
+      <br>
+      <button mat-button  (click)="  AddProject(p.projectName, p.orderDate, p.dueDate)" color="primary" *ngIf="newProject" ></button>Add New Project</button>
+      <button mat-button  (click)="olddrawing()" color="primary" *ngIf="!newProject">Open Project</button>
+      <button mat-button  (click)="DeleteProject()" color="primary" *ngIf="!newProject">Delete Project</button>
+  </div>
+  
+   <!-- <div *ngIf="fb.firstName.errors?.min">First Name is required</div> -->

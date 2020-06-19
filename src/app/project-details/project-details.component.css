@@ -1,0 +1,18 @@
+div{
+    /* border: 1px darkblueer; */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;     
+     color:darkblue; 
+     
+     /* width: auto; */
+}
+
+h3{
+    color: darkgoldenrod;
+    font-family: Arial, Helvetica, sans-serif;      
+}
+
+button{
+    color:darkblue;
+    background-color: darkgoldenrod;
+}

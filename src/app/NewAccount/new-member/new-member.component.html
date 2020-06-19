@@ -1,0 +1,59 @@
+<div class="container">
+    
+    <div class="container">
+            <h3><b>Create Account</b></h3>
+            <form #signUpForm="ngForm" >
+                            <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" 
+                                    required
+                                    [(ngModel)]="model.userName" name="name"
+                                    #name="ngModel">
+                                    <div *ngIf="name.invalid &&  
+                                            (name.touched||name.dirty)"
+                                            class="alert alert-danger">
+                                            <div *ngIf="name.errors.required">
+                                                    Name is required
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" 
+                                    ngModel email
+                                    required
+                                    [(ngModel)]="model.email" name="email"
+                                    #email="ngModel">
+                                    <div *ngIf="email.invalid &&  
+                                            (email.touched||email.dirty)"
+                                            class="alert alert-danger">
+                                            <div *ngIf="email.errors.required && email.value===''">
+                                                    Email is required
+                                            </div>
+                                            <div id="vis" *ngIf="email.invalid && email.value!=''">
+                                                    Invalid email address
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" 
+                                    required minlength="7" 
+                                    [(ngModel)]="model.userPassword" name="password"
+                                    #password="ngModel">
+                                    <div *ngIf="password.invalid &&  
+                                            (password.touched||password.dirty)"
+                                            class="alert alert-danger">
+                                            <div *ngIf="password.errors.required">
+                                                    Password is required
+                                            </div>
+                                            <div *ngIf="password.errors.minlength">
+                                                    Password must be at least 7 characters long
+                                            </div>
+                                    </div>
+                            </div>
+                    <button type="submit" class="btn btn-default" (click)="addMember(name.value, email.value, password.value)" [disabled]="!signUpForm.form.valid" >Sign Up</button>
+            </form>
+            
+    </div>
+</div>

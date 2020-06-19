@@ -1,0 +1,20 @@
+<header><h2>New Member? </h2></header>
+        <body>
+                <div>
+                        <h3><b>Please Sign Up</b></h3>
+                        <form>
+                                <div class="form-group" style="visibility: hidden;">
+                                        <label for="name1">Name</label>
+                                        <input type="text" class="form-control">
+                                </div>
+                                       
+                                <div class="form-group" style="visibility: hidden;">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control">
+                                </div>
+                                <span style="visibility: hidden;"  class="alert alert-danger">Your Password or User Name is Incorrect</span><br><br>
+                                <button type="submit" class="btn btn-default" (click)="signUpPage()">Create New Account</button>
+                        </form>
+                </div>
+                <a style="visibility: hidden;" class="fp" href="forgot-password" >Forgot My Password</a>
+        </body>
